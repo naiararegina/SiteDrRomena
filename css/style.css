@@ -1,0 +1,300 @@
+/*Version 1.0*/
+*{
+	margin: 0; 
+	padding: 0; 
+	font-size: 100%; 
+	box-sizing: border-box; 
+	font-family: 'El Messiri', sans-serif;
+}
+nav, ul {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+a:hover {
+    opacity: 1.5;
+}
+
+/*HEADER*/
+header {
+	background-color:rgba(200, 161, 139, 0.7);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 60px;
+	font-size: 20px;
+}
+
+header img {
+	width: 70px;
+}
+
+header nav {
+	display: flex;
+}
+
+header li a {
+	color: #000000;
+}
+
+header li {
+	margin: 0 20px;
+}
+
+header li:first-child {
+	margin-left: 0;
+}
+header li:last-child {
+	margin-right: 0;
+}
+
+@media (max-width: 700px){
+	header {
+		flex-direction: column;/*menu pula para baixo quando diminuir a tela*/
+	    margin-bottom: 15px;
+	    font-size: 16px;
+	}
+
+}
+
+/*BIO*/
+.bio {
+	background-image: url(../img/flor.jpg);
+	background-size: cover;
+	min-height: 100vh;/*é unidae relativa =100%*/
+	color: #000000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;/*renderiza em linhas os iten h li*/
+	text-align: center;
+}
+
+.bio h1 {
+   font-size: 3.2rem;
+   margin-bottom: 5px;
+}
+
+.bio h3 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	color: #000000;
+}
+
+@media (max-width: 700px){
+	.bio h1 {
+      font-size: 2.5rem;
+	}
+	.bio h3 {
+      font-size: 1.0rem;
+	}
+}
+
+/*SOBRE NOS*/
+.quemSomos {
+	background-color: #F9ECD1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 30px;
+
+}
+
+.quemSomos h3 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+	color: #191c03;
+	text-align: center;
+}
+
+.quemSomos hr {
+	width: 400px;
+	height: 2px;
+	background-color: #191c03;
+    margin-bottom: 40px;
+    border:none;
+}
+
+.quemSomos .sobreMim {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;/*permitir a quebra de linha*/
+}
+
+.quemSomos .sobreMim li {
+	height: 350px;
+	padding: 20px;
+	border-radius: 4px;
+	background-clip: content-box;/*????*/
+	background-size: cover;
+	background-position: center;/*tds back do LI vão ocupar o espaço no li centralizado*/
+}
+
+.quemSomos .sobreMim li.imagem {
+	flex-basis: 40%;
+}
+
+.quemSomos .sobreMim li.text {
+	flex-basis: 60%;
+}
+
+@media (max-width: 700px){/*quando diminuir a tela*/
+	.quemSomos .sobreMim li.imagem, .quemSomos .sobreMim li.text {
+		flex-basis:100%;
+		  }
+}
+
+/*CARACTERISTICAS*/
+.caracteristicas {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 50px;
+
+}
+
+.caracteristicas h3 {
+	font-size: 2rem;
+	margin-bottom: 35px;
+	color: #191c03;
+	text-align: center;
+}
+
+.caracteristicas p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	color: #191c03;
+	text-align: center;
+}
+
+.caracteristicas .grid {
+	width: 100%;
+    display: flex;
+    flex-wrap: wrap;/*permitir a quebra de linha*/
+}
+
+.caracteristicas .grid li {
+	height: 350px;
+	padding: 20px;
+	border-radius: 4px;
+	background-clip: content-box;/*????*/
+	background-size: cover;
+	background-position: center;/*tds back do LI vão ocupar o espaço no li centralizado*/
+}
+
+.caracteristicas .grid li.small {
+	flex-basis: 40%;
+}
+
+.caracteristicas .grid li.large {
+	flex-basis: 60%;
+}
+
+@media (max-width: 700px){/*quando diminuir a tela*/
+	.caracteristicas .grid li.small, .caracteristicas .grid li.large {
+		flex-basis:100%;
+		  }
+}
+
+
+/*CONTATO*/
+.contato {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 50px;
+}
+.contato h3 {
+	font-size: 2rem;
+	margin-bottom: 35px;
+	text-align: center;
+	color: #E6EB33;
+}
+
+.contato p {
+	max-width: 800px;
+	margin-bottom: 35px;
+	color: #E6EB33;
+	text-align: center;
+}
+
+.contato hr {
+	width: 200px;
+	height: 2px;
+	background-color: #E6EB33;
+    margin-bottom: 70px;
+    border:none;
+}
+.contato form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column wrap;
+}
+.contato input {
+	padding: 15px;
+	border:1px solid #E6EB33;
+    border-radius: 4px;
+    margin-right: 15px;
+    flex: 1;
+}
+
+.contato textarea {
+    width: 80%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 4%;
+}
+.contato button {
+	padding: 15px;
+	background-color:#E6EB33;
+    color:  #2B1606;
+    text-transform: uppercase;
+    border:none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media (max-width: 700px){/*quando diminuir a tela*/
+	.contato input, .contato textarea {
+		flex-basis:100%;
+		margin-bottom: 15px;
+	}
+}
+
+/*FOOTER*/
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: #2B1606;
+	padding: 40px 0;
+	align-items: center;
+}
+footer ul {
+	display: flex;
+	margin-bottom: 25px;
+}
+footer ul li{
+	margin-right: 10px;
+}
+footer ul li:last-child{
+	margin-right: 0;
+}
+footer ul li a{
+	color: #E6EB33;
+	font-size: 2rem;
+}
+footer p{
+	color: #E6EB33;
+	text-align: center;
+}
+
